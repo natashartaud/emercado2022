@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="emailInput" data-bs-toggle="dropdown" aria-expanded="false">
+              
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="emailInput">
+              <li><a class="dropdown-item" href="cart.html">Mi Carrito</a></li>
+              <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+              <li><a class="dropdown-item" href="index.html">Cerrar sesión</a></li>
+            </ul>
+          </div>
+          <li class="nav-item">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="container">
+      <h2>Perfil</h2>
+      <div class=" col-md-3 container d-flex align-content-end gap-3 ">
+        <img id="userImageProfile" class="img-thumbnail"/>
+      </div>
+      <br></br>      
+      <form id="formUserData" class="row g-3" onsubmit="validateProfile ()">
+        <div class="mb-3 col-md-6">
+          <label for="name" class="form-label ">Primer nombre*</label>
+          <input type="text" class="form-control " id="name" aria-describedby="emailHelp" required>
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="secondname" class="form-label">Segundo nombre</label>
+          <input type="text" class="form-control" id="secondname" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="surname" class="form-label">Primer apellido*</label>
+          <input type="text" class="form-control" id="surname" aria-describedby="emailHelp" required>
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="secondsurname" class="form-label">Segundo apellido</label>
+          <input type="text" class="form-control" id="secondsurname" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="email1" class="form-label">E-mail</label>
+          <input type="text" class="form-control" id="email1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="cellphone" class="form-label">Teléfono de contacto*</label>
+          <input type="text" class="form-control" id="cellphone" aria-describedby="emailHelp" required>
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="userImage" class="form-label">Imagen de perfil</label>
+          <input type="file" accept="image/*;capture=camera" class="form-control" id="userImage" aria-describedby="emailHelp" onchange="gotPhoto(this)">
+        </div>
+        <button type="submit" class="btn btn-primary" >Guardar Cambios</button>
+      </div>
+        
+      </form>
+    </div>
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
+        2022</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/my-profile.js"></script>
+</body>
+
+</html>
